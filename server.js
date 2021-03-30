@@ -30,6 +30,7 @@ app.get('/',(req,res)=>{
 })
 
 app.post('/',(req,res)=>{
+  console.log(req.body)
 	var {name,rollno} =req.body;
 	var records = [[req.body.name,req.body.rollno]];
 	if(records[0][0]!=null)
