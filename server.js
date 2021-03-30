@@ -27,13 +27,10 @@ con.connect(function(err) {
 
 
 app.get('/',(req,res)=>{
-  con.connect(function(err) {
-  if (err) throw err;
-  con.query("SELECT * FROM student", function (err, result, fields) {
+  con.query("SELECT * FROM student", function (err,result,fields) {
     if (err) throw err;
     console.log(result);
-  });
-});
+  })
   res.json(result);
 })
 
