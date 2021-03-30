@@ -29,9 +29,10 @@ con.connect(function(err) {
 app.get('/',(req,res)=>{
   con.query("SELECT * FROM student", function (err,result,fields) {
     if (err) throw err;
-    console.log(JSON.stringify(result));
+    console.log(result);
   })
-  res.json(JSON.stringify(result));
+  var json = JSON.parse(JSON.stringify(result))
+  res.send(json);
 })
 
 
