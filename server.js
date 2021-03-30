@@ -32,7 +32,7 @@ app.get('/',(req,res)=>{
     console.log(result);
   })
   var json = JSON.parse(JSON.stringify(result))
-  res.send(json);
+  res.json(json);
 })
 
 
