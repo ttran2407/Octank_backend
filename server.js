@@ -13,7 +13,7 @@ var con = mysql.createConnection({
   host: "octankdatabase.cluster-cuqcrvxm3m5o.us-east-1.rds.amazonaws.com", // ip address of server running mysql
   user: "octankadmin", // user name to your mysql database
   password: "octankadmin", // corresponding password
-  database: "student" // use the specified database
+  database: "octankadmin" // use the specified database
 });
 
 // make to connection to the database.
