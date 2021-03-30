@@ -29,10 +29,11 @@ con.connect(function(err) {
 app.get('/',(req,res)=>{
   con.query("SELECT * FROM student", function (err,result,fields) {
     if (err) throw err;
-    console.log(result);
+    console.log(JSON.stringify(result));
   })
-  res.json(result);
+  res.json(JSON.stringify(result));
 })
+
 
 app.post('/',(req,res)=>{
   console.log(req.body)
@@ -48,8 +49,6 @@ app.post('/',(req,res)=>{
 		});
 	}
 	res.json(req.body);
-
-
 })
 
 app.listen(3001,()=>{
