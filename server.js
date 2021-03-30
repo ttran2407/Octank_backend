@@ -34,7 +34,7 @@ app.get('/',(req,res)=>{
       console.log(json)
   })
 
-  res.send(json);
+  res.send([{"name": "Tien"}]);
 })
 
 
