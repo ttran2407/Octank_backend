@@ -4,6 +4,7 @@ const cors=require('cors');
 
 const app=express();
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded())
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -31,9 +32,7 @@ app.get('/',(req,res)=>{
 })
 
 app.post('/',(req,res)=>{
-  var info = JSON.parse(req.body)
   console.log(req.body)
-  console.log(info)
 	var {name,rollno} =req.body;
 	var records = [[req.body.name,req.body.rollno]];
 	if(records[0][0]!=null)
