@@ -32,9 +32,9 @@ app.get('/',(req,res)=>{
     if (err) throw err;
     json = JSON.parse(JSON.stringify(result))
     console.log(json)
+    res.send(json);
   })
-  console.log(json)
-  res.send(json);
+
 })
 
 
