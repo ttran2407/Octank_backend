@@ -41,7 +41,7 @@ app.post('/',(req,res)=>{
 			console.log(res);
 		});
 	}
-	res.json('Form recieved');
+	res.json('Form recieved', req.body);
 
 
 })
